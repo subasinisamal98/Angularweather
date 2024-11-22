@@ -38,31 +38,6 @@ export class WeatherComponent {
     });
   }
 
-  fetchWeatherByLocation() {
-    if (!navigator.geolocation) {
-      this.error = 'Geolocation is not supported by your browser.';
-      return;
-    }
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        this.weatherService.getWeatherByCoords(latitude, longitude).subscribe({
-          next: (data) => {
-            this.weatherData = data;
-            this.error = '';
-          },
-          error: () => {
-            this.error = 'Failed to fetch weather data for your location.';
-            this.weatherData = null;
-          },
-        });
-      },
-      () => {
-        this.error = 'Failed to fetch location. Please try again.';
-      }
-    );
-  }
-
   reset() {
     this.city = '';
     this.weatherData = null;
