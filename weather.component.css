@@ -1,0 +1,72 @@
+.body{
+    background-image: url('/assets/image1.jpg');
+    
+}
+.container-fluid{
+    background: black;
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+h2{
+    color: white;
+    letter-spacing: .07rem;
+}
+
+input{
+    width: 150px;
+    padding: 6px;
+    border-radius: 2px;
+    
+}
+.input-group{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn{
+    width: 6rem;
+    padding: 6px;
+    border-radius: 2px;
+    border: none;
+    margin-left: 8px;
+    
+}
+
+.weather-box {
+  align-items: center;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.1); 
+  color: white; 
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+  text-align: center;
+  width: 100%;
+  max-width: 400px; 
+}
+
+.error-box {
+  background-color: rgba(255, 255, 255, 0.1); 
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+@media (max-width: 768px) {
+  .weather-box, .error-box {
+    padding: 15px;
+    width: 90%;
+  }
+}
+
+.unit-toggle {
+  padding: 1px;
+}
+
